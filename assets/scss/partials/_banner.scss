@@ -1,0 +1,48 @@
+.banner {
+    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url('../../assets/images/Raftingfoto\(31\).jpg') center/cover no-repeat scroll;
+    width: 100%;
+    height: 90vh;
+    @include flex(center, flex-start, column);
+
+    @include breakpoints(768px) {
+        align-items: center;
+        text-align: center
+    }
+
+    &-body {
+        @include flex(center, flex-start, column);
+        animation: slideFromBottom 1s $transition-in;
+        animation-delay: 0.7s;
+
+        @include breakpoints(768px) {
+            align-items: center;
+            text-align: center
+        }
+
+        h1 {
+            font-size: 3rem;
+
+            @include breakpoints(768px) {
+                font-size: 2.5rem;
+            }
+
+            @include breakpoints(576px) {
+                font-size: 2rem;
+            }
+        }
+
+        h5 {
+            font-size: 1.1rem;
+            max-width: 66%;
+
+            @include breakpoints(768px) {
+                font-size: 1rem;
+                max-width: 100%;
+            }
+
+            @include breakpoints(576px) {
+                font-size: 0.9rem;
+            }
+        }
+    }
+}

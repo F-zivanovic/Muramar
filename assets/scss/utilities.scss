@@ -1,0 +1,152 @@
+$utilities: (
+    "padding":("prefix": "p",
+        "values": ("0": 0px,
+            "1": 5px,
+            "2": 10px,
+            "3": 15px,
+            "4": 20px,
+            "5": 25px,
+            "6": 30px),
+    ),
+
+    "padding-top":("prefix": "pt",
+        "values": ("0": 0px,
+            "1": 5px,
+            "2": 10px,
+            "3": 15px,
+            "4": 20px,
+            "5": 25px,
+            "6": 30px),
+    ),
+
+    "padding-right":("prefix": "pr",
+        "values": ("0": 0px,
+            "1": 5px,
+            "2": 10px,
+            "3": 15px,
+            "4": 20px,
+            "5": 25px,
+            "6": 30px),
+    ),
+
+    "padding-bottom":("prefix": "pb",
+        "values": ("0": 0px,
+            "1": 5px,
+            "2": 10px,
+            "3": 15px,
+            "4": 20px,
+            "5": 25px,
+            "6": 30px),
+    ),
+
+    "padding-left":("prefix": "pl",
+        "values": ("0": 0px,
+            "1": 5px,
+            "2": 10px,
+            "3": 15px,
+            "4": 20px,
+            "5": 25px,
+            "6": 30px),
+    ),
+
+    "margin":("prefix": "m",
+        "values": ("0": 0px,
+            "1": 5px,
+            "2": 10px,
+            "3": 15px,
+            "4": 20px,
+            "5": 25px,
+            "6": 30px),
+    ),
+
+    "margin-top":("prefix": "mt",
+        "values": ("0": 0px,
+            "1": 5px,
+            "2": 10px,
+            "3": 15px,
+            "4": 20px,
+            "5": 25px,
+            "6": 30px),
+    ),
+
+    "margin-right":("prefix": "mr",
+        "values": ("0": 0px,
+            "1": 5px,
+            "2": 10px,
+            "3": 15px,
+            "4": 20px,
+            "5": 25px,
+            "6": 30px),
+    ),
+
+    "margin-bottom":("prefix": "mb",
+        "values": ("0": 0px,
+            "1": 5px,
+            "2": 10px,
+            "3": 15px,
+            "4": 20px,
+            "5": 25px,
+            "6": 30px),
+    ),
+
+
+    "margin-left":("prefix": "ml",
+        "values": ("0": 0px,
+            "1": 5px,
+            "2": 10px,
+            "3": 15px,
+            "4": 20px,
+            "5": 25px,
+            "6": 30px),
+    ),
+
+    "text-transform":("prefix":"text",
+        "values": ("uppercase":uppercase,
+            "lowercase": lowercase,
+            "capitalize": capitalize),
+    ),
+
+    "font-weight":("prefix":"fw",
+        "values": ("100":100,
+            "200":200,
+            "300":300,
+            "400":400,
+            "500":500,
+            "600":600,
+            "700":700,
+            "800":800),
+    ),
+
+    "color":("prefix":"color",
+        "values":("white":$white,
+            "black":$black,
+            "primary":$primaryColor ),
+    ),
+
+    "background-color":("prefix":"bg",
+        "values":("white":$white,
+            "black":$black,
+            "primary":$primaryColor ),
+    ),
+
+    "text-align":("prefix":"text-align",
+        "values":("center":center,
+            "left":left,
+            "right":right,
+            "justify":justify),
+    ),
+);
+
+// Generate utilities classes
+@each $property,
+$map in $utilities {
+    $prefix: map-get($map, "prefix");
+    $value: map-get($map, "values");
+
+    @each $key,
+    $value in $value {
+        .#{$prefix}-#{$key} {
+            #{$property}: $value;
+        }
+    }
+}

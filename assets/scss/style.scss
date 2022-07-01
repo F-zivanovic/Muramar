@@ -1,0 +1,19 @@
+/*---------------------------------
+EXTERNAL FILES
+---------------------------------*/
+@import 'variables';
+@import 'mixins';
+@import 'animations';
+@import 'utilities';
+
+/*---------------------------------
+    PARTIALS
+    ---------------------------------*/
+@import 'partials/default';
+@import 'partials/nav';
+@import 'partials/banner';
+@import 'partials/card';
+@import 'partials/rafting';
+@import 'partials/contact';
+@import 'partials/gallery';
+@import 'partials/footer';

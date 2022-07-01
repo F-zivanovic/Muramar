@@ -1,0 +1,69 @@
+.contact {
+
+    &-body {
+        @include flex(space-between, flex-start, row, wrap);
+
+        @include breakpoints(992px) {
+            justify-content: center;
+        }
+
+        .contact-info {
+            flex: 0 0 47%;
+            @include flex(space-between, center, row, wrap);
+            opacity: 0;
+            transform: translateX(-50%);
+            transition: $transition-in;
+
+            &.animated {
+                opacity: 1;
+                transform: translate(0);
+            }
+
+            @include breakpoints(992px) {
+                flex: 0 0 90%;
+            }
+
+            @include breakpoints(576px) {
+                flex: 0 0 100%;
+                justify-content: center;
+            }
+
+            article {
+                flex: 0 0 47%;
+                border: 1px solid rgba(0, 0, 0, .125);
+
+                @include breakpoints(576px) {
+                    flex: 0 0 90%;
+                }
+
+                i {
+                    font-size: 1.5rem;
+                }
+
+                h4 {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+
+        .map {
+            flex: 0 0 47%;
+            transform: translateX(50%);
+            opacity: 0;
+            transition: $transition-in;
+
+            &.animated {
+                opacity: 1;
+                transform: translate(0);
+            }
+
+            @include breakpoints(992px) {
+                flex: 0 0 90%;
+            }
+
+            @include breakpoints(576px) {
+                flex: 0 0 100%;
+            }
+        }
+    }
+}

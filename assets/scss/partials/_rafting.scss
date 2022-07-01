@@ -1,0 +1,64 @@
+.rafting {
+
+    &>p {
+        line-height: 2;
+    }
+
+    main {
+        @include flex(space-between, center, row, wrap);
+
+        @include breakpoints(768px) {
+            justify-content: center;
+        }
+
+        article {
+            flex: 0 0 47%;
+            border: 1px solid rgba(0, 0, 0, .125);
+            border-radius: 5px;
+            margin-top: 40px;
+            transition: $transition-in;
+            opacity: 0;
+
+            &:nth-child(1) {
+                transform: translateX(-50%);
+            }
+
+            &:nth-child(2) {
+                transform: translateX(50%);
+            }
+
+            &.animated {
+                opacity: 1;
+                transform: translate(0);
+            }
+
+            @include breakpoints(768px) {
+                flex: 0 0 90%;
+            }
+
+            @include breakpoints(576px) {
+                flex: 0 0 100%;
+            }
+
+            .article-img {
+                position: relative;
+                overflow: hidden;
+
+                img {
+                    height: auto;
+                    resize: both;
+                    vertical-align: middle;
+
+                    &:hover {
+                        transform: scale(1.1);
+                        transition: $transition-in;
+                    }
+                }
+
+                &>div {
+                    @include positioning(absolute, auto, auto, 0px, 0px);
+                }
+            }
+        }
+    }
+}

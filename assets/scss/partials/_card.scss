@@ -1,0 +1,26 @@
+.card {
+    @include grid(4, 0px);
+
+    @include breakpoints(992px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include breakpoints(768px) {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    article {
+
+        i {
+            font-size: 2rem;
+
+            @include breakpoints(768px) {
+                font-size: 1.7rem;
+            }
+        }
+
+        h5 {
+            font-size: 1.2rem;
+        }
+    }
+}

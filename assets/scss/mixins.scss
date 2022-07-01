@@ -1,0 +1,32 @@
+@mixin flex($justify, $align, $direction: row, $wrap: nowrap) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+    flex-wrap: $wrap;
+}
+
+@mixin grid($cols, $gap, $justify: center, $align: center) {
+    display: grid;
+    grid-template-columns: repeat($cols, 1fr);
+    grid-gap: $gap;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin breakpoints($bp) {
+    @media(max-width:$bp) {
+        @content;
+    }
+}
+
+
+@mixin positioning($position, $top, $right, $bottom, $left, $width: auto, $height: auto) {
+    position: $position;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+    width: $width;
+    height: $height;
+}

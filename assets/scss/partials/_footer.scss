@@ -1,0 +1,27 @@
+footer {
+
+    .footer-body {
+        @include flex(space-evenly, flex-start, row, wrap);
+
+        @include breakpoints(576px) {
+            flex-direction: column;
+        }
+
+        article {
+
+            &:nth-child(2) {
+                @include breakpoints(576px) {
+                    margin-top: 20px;
+                }
+            }
+
+            h4 {
+                font-size: 1.4rem;
+            }
+        }
+
+        p {
+            flex: 0 0 100%;
+        }
+    }
+}
