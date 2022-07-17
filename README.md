@@ -1,6 +1,6 @@
 # Rafting on Muri - Muramar
 
-<a href="https://muramar.si/">Live Preview</a> 
+<a href="https://muramar.netlify.app/">Live Preview</a> 
 
 ### Key Features:
 - HTML5 and CSS3(SCSS)
