@@ -585,9 +585,9 @@ nav .mobile-nav {
     transition: 0.4s ease-in;
     opacity: 0; }
     .rafting main article:nth-child(1) {
-      transform: translateX(-50%); }
+      transform: translateY(-50%); }
     .rafting main article:nth-child(2) {
-      transform: translateX(50%); }
+      transform: translateY(50%); }
     .rafting main article.animated {
       opacity: 1;
       transform: translate(0); }
@@ -633,7 +633,7 @@ nav .mobile-nav {
     flex-direction: row;
     flex-wrap: wrap;
     opacity: 0;
-    transform: translateX(-50%);
+    transform: translateY(-50%);
     transition: 0.4s ease-in; }
     .contact-body .contact-info.animated {
       opacity: 1;
@@ -657,7 +657,7 @@ nav .mobile-nav {
         font-size: 1.5rem; }
   .contact-body .map {
     flex: 0 0 47%;
-    transform: translateX(50%);
+    transform: translateY(50%);
     opacity: 0;
     transition: 0.4s ease-in; }
     .contact-body .map.animated {

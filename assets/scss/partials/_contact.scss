@@ -11,7 +11,7 @@
             flex: 0 0 47%;
             @include flex(space-between, center, row, wrap);
             opacity: 0;
-            transform: translateX(-50%);
+            transform: translateY(-50%);
             transition: $transition-in;
 
             &.animated {
@@ -48,7 +48,7 @@
 
         .map {
             flex: 0 0 47%;
-            transform: translateX(50%);
+            transform: translateY(50%);
             opacity: 0;
             transition: $transition-in;
 
