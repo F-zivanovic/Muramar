@@ -1,68 +1,60 @@
 .contact {
 
-    &-body {
-        @include flex(space-between, flex-start, row, wrap);
+    &__wrapper {
+        @include flex(space-between, flex-start, row wrap);
 
-        @include breakpoints(992px) {
+        @include breakpoints(1200px) {
             justify-content: center;
         }
 
-        .contact-info {
+        .contact__item {
             flex: 0 0 47%;
-            @include flex(space-between, center, row, wrap);
+            @include flex(space-between, stretch, row wrap);
+            margin-top: 2rem;
             opacity: 0;
             transform: translateY(-50%);
-            transition: $transition-in;
 
             &.animated {
                 opacity: 1;
                 transform: translate(0);
             }
 
-            @include breakpoints(992px) {
-                flex: 0 0 90%;
+            @include breakpoints(1200px) {
+                flex: 0 0 80%;
             }
 
             @include breakpoints(576px) {
                 flex: 0 0 100%;
-                justify-content: center;
             }
 
-            article {
-                flex: 0 0 47%;
-                border: 1px solid rgba(0, 0, 0, .125);
+            .contact__info-item {
+                flex: 0 0 45%;
+                border: 2px solid rgba(0, 0, 0, .125);
+                padding: 2rem;
+                text-align: center;
+                margin-bottom: 1rem;
 
-                @include breakpoints(576px) {
-                    flex: 0 0 90%;
+                @include breakpoints(768px) {
+                    flex: 0 0 100%;
+                }
+
+                .contact__info-heading {
+                    font-size: 1.5rem;
+                }
+
+                .contact__link {
+                    color: $black;
+
+                    &:hover {
+                        color: $primaryColor;
+                    }
                 }
 
                 i {
                     font-size: 1.5rem;
+                    color: $primaryColor;
                 }
 
-                h4 {
-                    font-size: 1.5rem;
-                }
-            }
-        }
-
-        .map {
-            flex: 0 0 47%;
-            transform: translateY(50%);
-            opacity: 0;
-            transition: $transition-in;
-
-            &.animated {
-                opacity: 1;
-                transform: translate(0);
-            }
-
-            @include breakpoints(992px) {
-                flex: 0 0 90%;
-            }
-
-            @include breakpoints(576px) {
-                flex: 0 0 100%;
             }
         }
     }

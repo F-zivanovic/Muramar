@@ -1,14 +1,15 @@
 /*---------------------------------
-EXTERNAL FILES
+    EXTERNAL FILES
 ---------------------------------*/
 @import 'variables';
 @import 'mixins';
 @import 'animations';
-@import 'utilities';
+
+
 
 /*---------------------------------
     PARTIALS
-    ---------------------------------*/
+---------------------------------*/
 @import 'partials/default';
 @import 'partials/nav';
 @import 'partials/banner';

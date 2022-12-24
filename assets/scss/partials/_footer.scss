@@ -1,27 +1,41 @@
-footer {
+.footer {
+    background-color: $black;
 
-    .footer-body {
-        @include flex(space-evenly, flex-start, row, wrap);
+    .footer__wrapper {
+        @include flex(space-evenly, flex-start, row wrap);
 
         @include breakpoints(576px) {
             flex-direction: column;
         }
 
-        article {
+        .footer__item {
 
-            &:nth-child(2) {
+            .footer__heading {
+                color: $white;
+                font-size: 1.5rem;
+                margin-bottom: 1rem;
+
                 @include breakpoints(576px) {
-                    margin-top: 20px;
+                    font-size: 1.2rem;
                 }
             }
 
-            h4 {
-                font-size: 1.4rem;
+            .footer__list {
+
+                &__item {
+                    margin-bottom: 1rem;
+                    color: $white;
+                }
             }
         }
 
-        p {
+        .footer__copy {
             flex: 0 0 100%;
+            text-align: center;
+            margin-top: 1.5rem;
+            padding-top: 2rem;
+            border-top: 2px solid $primaryColor;
+            color: $white;
         }
     }
 }

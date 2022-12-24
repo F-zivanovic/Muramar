@@ -2,70 +2,78 @@
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
-}
-
-html {
     scroll-behavior: smooth;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    list-style-type: none;
+    transition: all .4s linear;
 }
 
 body {
     overflow-x: hidden;
-    font-family: $fontFamily;
-    font-size: $fontSize;
+    font-family: 'Poppins', sans-serif;
+    font-size: 100%;
     background-color: $white;
     color: $black;
     line-height: 1.5;
+
+    @include breakpoints(576px) {
+        font-size: 85%;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-transform: capitalize;
 }
 
 a {
-    text-decoration: none;
     cursor: pointer;
-    transition: $transition-out;
     color: $white;
 
-    &:focus,
-    &:active {
-        outline: none;
-    }
-
     &:hover {
-        transition: $transition-in;
         color: $primaryColor;
     }
 }
 
-ul {
-    list-style-type: none;
-}
 
 img {
     width: 100%;
+    vertical-align: middle;
+    object-fit: cover;
 }
 
 i {
     cursor: pointer;
-    transition: $transition-in;
+}
 
-    &:hover {
-        transition: $transition-out;
+
+.container {
+    width: 80%;
+    margin: 0px auto;
+
+    @media(max-width:576px) {
+        width: 90%;
     }
 }
 
 .btn {
-    font-size: 1rem;
-    padding: 15px 20px;
+    padding: 10px 20px;
     cursor: pointer;
-    transition: $transition-in;
     background-color: $primaryColor;
     color: $white;
     border: 2px solid $primaryColor;
     border-radius: 5px;
     display: inline-block;
-    text-transform: uppercase;
+    text-transform: capitalize;
     font-weight: 700;
 
     &:hover {
-        transition: $transition-out;
         color: $primaryColor;
         background-color: transparent;
         border: 2px solid $primaryColor;
@@ -73,13 +81,12 @@ i {
 
     @include breakpoints(576px) {
         font-size: 0.8rem;
-        padding: 10px 20px;
     }
 }
 
 
 .section {
-    padding: $padding;
+    padding: 70px 0px;
 
     &-title {
         text-align: center;
@@ -103,11 +110,12 @@ i {
     }
 }
 
-.container {
-    width: 80%;
-    margin: 0px auto;
+#scrollBtn {
+    @include positioning(fixed, auto, 1.5rem, 1.5rem);
+    z-index: 100;
+    transform: translateX(500px);
 
-    @media(max-width:576px) {
-        width: 90%;
+    &.show {
+        transform: translateX(0);
     }
 }

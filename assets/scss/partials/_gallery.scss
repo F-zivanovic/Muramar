@@ -1,57 +1,34 @@
 .gallery {
 
-    &-body {
-        height: 60vh;
-        position: relative;
+    &__wrapper {
+        @include flex(flex-start, stretch, row wrap, 1.5rem);
 
-        @include breakpoints(576px) {
-            height: 45vh;
-        }
+        .gallery__item {
+            flex: 1 1 250px;
+            position: relative;
 
-        i {
-            height: 50px;
-            width: 50px;
-            line-height: 50px;
-            text-align: center;
-            font-size: 1.7rem;
-            color: $white;
-            background: rgba(0, 0, 0, 0.5);
-            top: 45%;
-            position: absolute;
-            z-index: 20;
-            border: 1px solid $black;
-
-            &:hover {
-                color: $primaryColor;
-                background: none;
-                border: 1px solid $primaryColor;
-                transition: $transition-in;
-            }
-
-            &#right {
-                right: 0px;
-            }
-
-            &#left {
-                left: 0px;
-            }
-        }
-
-        .gallery-overlay {
-            @include positioning(absolute, 0%, 0%, 0%, 0%, 100%, 100%);
-            background: rgba(0, 0, 0, 0.4);
-        }
-
-        .slider-images {
-            height: 100%;
-
-            img {
+            .gallery__img {
                 height: 100%;
-                object-fit: cover;
-                display: none;
 
-                &:first-child {
+                img {
+                    height: 100%;
+                }
+            }
+
+            &-overlay {
+                i {
+                    display: none;
+                }
+            }
+
+            &:hover .gallery__item-overlay {
+                @include positioning(absolute, 0, 0, 0, 0);
+                background-color: rgba(0, 0, 0, 0.7);
+                @include flex();
+
+                i {
                     display: block;
+                    font-size: 2rem;
                 }
             }
         }

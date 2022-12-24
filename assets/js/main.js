@@ -1,14 +1,14 @@
+// Open/close navigation list
 const hamburgerIcon = document.getElementById('hamburger');
 const mobileNav = document.getElementById('mobile-nav');
 
-// Open/close mobile nav menu
 hamburgerIcon.addEventListener('click', () => {
     mobileNav.classList.toggle('hidden');
     hamburgerIcon.classList.toggle('open');
 });
 
 
-// Close mobile nav menu when click on link in mobile menu
+// Close navigation list when click on link of navigation list
 const mobileNavItems = document.querySelectorAll('#mobile-nav li');
 
 for (mobileNavItem of mobileNavItems) {
@@ -18,42 +18,32 @@ for (mobileNavItem of mobileNavItems) {
     });
 }
 
-
-// Banner - SLider
-const rightArrow = document.querySelector('#right');
-const leftArrow = document.querySelector('#left');
-const images = document.querySelectorAll('.slider-images img');
-
-let imgNum = 0;
-
-rightArrow.addEventListener('click', () => {
-    displayNone();
-    imgNum++;
-
-    if (imgNum === images.length) {
-        imgNum = 0;
-    }
-
-    images[imgNum].style.display = 'block';
+// Close navigation list when we scroll down
+window.addEventListener('scroll', () => {
+    hamburgerIcon.classList.remove('open');
+    mobileNav.classList.add('hidden');
 });
 
 
-leftArrow.addEventListener('click', () => {
-    displayNone();
-    imgNum--;
+// Show fixed BTN
+window.addEventListener('scroll', () => {
+    const btn = document.getElementById('scrollBtn');
 
-    if (imgNum === -1) {
-        imgNum = images.length - 1;
+    if (document.documentElement.scrollTop > 150) {
+        btn.classList.add('show');
+    } else {
+        btn.classList.remove('show');
     }
-
-    images[imgNum].style.display = 'block';
 });
 
-function displayNone() {
-    for (img of images) {
-        img.style.display = 'none';
-    }
-}
+
+// Click on BTN - Scroll to top: 
+const btn = document.getElementById('scrollBtn');
+
+btn.addEventListener('click', () => {
+    window.scroll({ top: 0, behavior: "smooth" });
+});
+
 
 
 // Animation on scroll
@@ -66,27 +56,27 @@ function raftingSectionAnimation() {
     const sectionAnimation = document.querySelector('.rafting > main');
     const sectionPosition = sectionAnimation.getBoundingClientRect().top;
     const screenPosition = window.innerHeight / 1.3;
-
-    const leftArticle = document.querySelector('.card-left');
-    const rightArticle = document.querySelector('.card-right');
+    const raftingItems = document.querySelectorAll('.rafting__item');
 
     if (sectionPosition < screenPosition) {
-        leftArticle.classList.add('animated');
-        rightArticle.classList.add('animated');
+
+        for (let item of raftingItems) {
+            item.classList.add('animated');
+        }
     }
 }
 
 function contactSectionAnimation() {
 
-    const sectionAnimation = document.querySelector('.contact > .contact-body');
+    const sectionAnimation = document.querySelector('.contact > .contact__wrapper');
     const sectionPosition = sectionAnimation.getBoundingClientRect().top;
     const screenPosition = window.innerHeight / 1.3
-
-    const contactInfo = document.querySelector('.contact-info');
-    const map = document.querySelector('.map');
+    const contactItems = document.querySelectorAll('.contact__item');
 
     if (sectionPosition < screenPosition) {
-        contactInfo.classList.add('animated');
-        map.classList.add('animated');
+
+        for (let item of contactItems) {
+            item.classList.add('animated');
+        }
     }
 }
