@@ -339,6 +339,9 @@ i {
 
 .nav {
   padding: 1rem 0; }
+  @media (max-width: 576px) {
+    .nav {
+      padding: .8rem 0; } }
   .nav__wrapper {
     display: flex;
     justify-content: space-between;
@@ -497,8 +500,7 @@ i {
   justify-content: flex-start;
   align-items: stretch;
   flex-flow: row wrap;
-  gap: 0px;
-  margin-top: -8rem; }
+  gap: 0px; }
   @media (max-width: 768px) {
     .cards {
       flex-direction: column; } }

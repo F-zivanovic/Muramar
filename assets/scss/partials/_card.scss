@@ -1,6 +1,5 @@
 .cards {
     @include flex(flex-start, stretch, row wrap);
-    margin-top: -8rem;
 
     @include breakpoints(768px) {
         flex-direction: column;

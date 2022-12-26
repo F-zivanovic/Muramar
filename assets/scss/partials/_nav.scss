@@ -1,6 +1,10 @@
 .nav {
     padding: 1rem 0;
 
+    @include breakpoints(576px) {
+        padding: .8rem 0;
+    }
+
     &__wrapper {
         @include flex(space-between);
         animation: slideFromTop 1.5s;
