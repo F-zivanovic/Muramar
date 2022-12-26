@@ -53,7 +53,7 @@ window.onscroll = () => {
 }
 
 function raftingSectionAnimation() {
-    const sectionAnimation = document.querySelector('.rafting > main');
+    const sectionAnimation = document.querySelector('.rafting > .rafting__wrapper');
     const sectionPosition = sectionAnimation.getBoundingClientRect().top;
     const screenPosition = window.innerHeight / 1.3;
     const raftingItems = document.querySelectorAll('.rafting__item');
