@@ -1,15 +1,39 @@
-# Rafting on Muri - Muramar - <a href="https://muramar.si/">Live Preview</a>
 
+<h1 align="center">Rafting on Muri - Muramar - <a href="https://muramar.si/">Live Preview</a> </h1>
 
 ## Built with
 This section contains list of all major technologies/libraries used to develop this project. 
 
   ### Technologies
 
- ![HTML5](https://img.shields.io/badge/HTML5-323330?style=for-the-badge&logo=html5&logoColor=F7DF1E) 
- ![CSS3](https://img.shields.io/badge/CSS3-323330?style=for-the-badge&logo=css3&logoColor=F7DF1E)
- ![Sass](https://img.shields.io/badge/Sass-323330?style=for-the-badge&logo=sass&logoColor=F7DF1E) 
- ![JavaScript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
+ 1. ![HTML5](https://img.shields.io/badge/HTML5-323330?style=for-the-badge&logo=html5&logoColor=F7DF1E) 
+    - Semantic elements
+    - Navbar navigation
+    - Footer navigation
+    - BEM metodology
+    - Meta data
+    - Geolocation
+ 2. ![CSS3](https://img.shields.io/badge/CSS3-323330?style=for-the-badge&logo=css3&logoColor=F7DF1E)
+    - Flexbox layout
+    - Custom CSS  animations
+    - On hover effect
+    - 100$ responsive
+    - Position layout
+    - 3D Transformations
+ 3. ![Sass](https://img.shields.io/badge/Sass-323330?style=for-the-badge&logo=sass&logoColor=F7DF1E) 
+    - Nesting
+    - Variables
+    - Mixins
+    - Partials
+    - Loops
+    - Maps
+ 4. ![JavaScript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
+    - Variables
+    - Arrow functions
+    - Events
+    - Manipulate with DOM
+    - Functional hamburger menu
+    - Scroll to top btn
  
   ### Libraries
   - <a href="https://fontawesome.com/">*Font Awesome*</a>
