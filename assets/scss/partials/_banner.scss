@@ -1,51 +1,59 @@
 .banner {
-    background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url('../../assets/images/Raftingfoto\(31\).jpg') center/cover no-repeat scroll;
-    height: 90vh;
-    @include flex(center, flex-start, column);
-    color: $white;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url("../../assets/images/Raftingfoto\(29\).jpg") center/cover no-repeat
+      scroll;
+  height: 90vh;
+  @include flex(center, center, column);
+  color: $white;
+  text-align: center;
+
+  @include breakpoints(576px) {
+    height: 75vh;
+  }
+
+  &__wrapper {
+    @include flex(center, center, column);
 
     @include breakpoints(768px) {
-        text-align: center
+      align-items: center;
     }
 
-    @include breakpoints(576px) {
-        height: 75vh;
+    .banner__h1 {
+      font-size: 3rem;
+      animation-name: slideFromTop;
+      animation-duration: 2s;
+
+      @include breakpoints(576px) {
+        font-size: 2rem;
+      }
     }
 
-    &__wrapper {
-        @include flex(center, flex-start, column);
+    .banner__h3 {
+      font-size: 1.1rem;
+      max-width: 750px;
+      line-height: 2;
+      font-weight: 400;
+      margin: 1rem 0;
+      animation-name: slideFromBehind;
+      animation-duration: 2s;
 
-        @include breakpoints(768px) {
-            align-items: center;
-        }
+      @include breakpoints(768px) {
+        font-size: 1rem;
+        max-width: 100%;
+      }
 
-        .banner__h1 {
-            font-size: 3rem;
+      @include breakpoints(576px) {
+        font-size: 0.8rem;
+      }
 
-            @include breakpoints(576px) {
-                font-size: 2rem;
-            }
-        }
-
-        .banner__h3 {
-            font-size: 1.1rem;
-            max-width: 750px;
-            line-height: 2;
-            font-weight: 400;
-            margin: 1rem 0;
-
-            @include breakpoints(768px) {
-                font-size: 1rem;
-                max-width: 100%;
-            }
-
-            @include breakpoints(576px) {
-                font-size: 0.8rem;
-            }
-
-            .banner__span {
-                color: $primaryColor;
-            }
-        }
+      .banner__span {
+        color: $primaryColor;
+      }
     }
+
+    .banner__link {
+      animation-name: slideFromBottomBtn;
+      animation-duration: 2s;
+    }
+  }
 }

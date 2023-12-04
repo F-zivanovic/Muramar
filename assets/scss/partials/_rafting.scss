@@ -1,92 +1,90 @@
 .rafting {
+  &__paragraph {
+    line-height: 2;
+    font-size: 1.1rem;
+    text-align: justify;
 
-    &__paragraph {
-        line-height: 2;
-        font-size: 1.1rem;
-        text-align: justify;
-
-        @include breakpoints(576px) {
-            font-size: 1rem
-        }
-
-        .rafting__span {
-            font-weight: 700;
-        }
+    @include breakpoints(576px) {
+      font-size: 1rem;
     }
 
-    &__wrapper {
-        @include flex(space-evenly, center, row wrap);
-
-        @include breakpoints(768px) {
-            justify-content: center;
-        }
-
-        .rafting__item {
-            flex: 0 0 40%;
-            border: 2px solid rgba(0, 0, 0, .125);
-            border-radius: 5px;
-            margin-top: 40px;
-            transform: translateY(-50%);
-            opacity: 0;
-
-
-            @include breakpoints(992px) {
-                flex: 0 0 80%;
-            }
-
-            @include breakpoints(576px) {
-                flex: 0 0 100%;
-            }
-
-            &.animated {
-                opacity: 1;
-                transform: translate(0);
-            }
-
-            .rafting__img {
-                position: relative;
-                overflow: hidden;
-
-                .rafting__picture {
-                    height: 20rem;
-
-                    @include breakpoints(576px) {
-                        height: 15rem;
-                    }
-
-                    &:hover {
-                        transform: scale(1.1);
-                    }
-                }
-
-                &-box {
-                    @include positioning(absolute, auto, auto, 0px, 0px);
-                    background-color: $primaryColor;
-                    color: $white;
-                    padding: 1rem;
-                    text-transform: uppercase;
-                    font-weight: 600;
-                }
-            }
-
-            .rafting__text {
-                text-align: center;
-                padding: 2rem 0;
-
-                .rafting__heading {
-                    text-transform: uppercase;
-                    font-size: 1.5rem;
-                    margin-bottom: 1rem;
-                }
-
-                &-paragraph {
-                    font-weight: 700;
-                }
-
-                p {
-                    margin-bottom: 1rem;
-                }
-            }
-        }
+    .rafting__span {
+      font-weight: 700;
     }
+  }
+
+  &__wrapper {
+    @include flex(space-evenly, center, row wrap, 2rem);
+    margin-top: 2.5rem;
+
+    @include breakpoints(768px) {
+      justify-content: center;
+    }
+
+    .rafting__item {
+      flex: 0 0 40%;
+      border: 2px solid rgba(0, 0, 0, 0.125);
+      border-radius: 5px;
+      //   transform: translateY(-50%);
+      //   opacity: 0;
+
+      @include breakpoints(992px) {
+        flex: 0 0 80%;
+      }
+
+      @include breakpoints(576px) {
+        flex: 0 0 100%;
+      }
+
+      //   &.animated {
+      //     opacity: 1;
+      //     transform: translate(0);
+      //   }
+
+      .rafting__img {
+        position: relative;
+        overflow: hidden;
+
+        .rafting__picture {
+          height: 20rem;
+
+          @include breakpoints(576px) {
+            height: 15rem;
+          }
+
+          &:hover {
+            transform: scale(1.1);
+          }
+        }
+
+        &-box {
+          @include positioning(absolute, auto, auto, 0px, 0px);
+          background-color: $primaryColor;
+          color: $white;
+          padding: 1rem;
+          text-transform: uppercase;
+          font-weight: 600;
+        }
+      }
+
+      .rafting__text {
+        text-align: center;
+        padding: 2rem 0;
+
+        .rafting__heading {
+          text-transform: uppercase;
+          font-size: 1.5rem;
+          margin-bottom: 1rem;
+        }
+
+        &-paragraph {
+          font-weight: 700;
+        }
+
+        p {
+          margin-bottom: 1rem;
+        }
+      }
+    }
+  }
 }

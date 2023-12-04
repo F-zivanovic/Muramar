@@ -23,8 +23,9 @@
         rel="stylesheet">
 
     <!-- Font awesome CDN CSS link -->
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- Light gallery CDN CSS link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css">
@@ -37,50 +38,63 @@
 <body>
 
 
-    <!-- Navbar section starts -->
-    <nav class="nav " id="nav">
+    <!-- Top navbar section starts -->
+    <div class="topnav">
+        <div class="topnav__wrapper container">
+            <div class="topnav__info">
+                <i class="fa-solid fa-location-dot"></i>
+                <span>Krog, brod na Muri</span>
+                <i class="fa-solid fa-phone"></i>
+                <span>+386 51 457 800</span>
+            </div>
+            <div class="topnav__social">
+                <a href="https://www.facebook.com/muramarrafting" class="topnav__social__link facebook" target="_blank">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.instagram.com/rafting_muramar/?hl=en" class="topnav__social__link instagram"
+                    target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="mailto:info@muramar.si" class="topnav__social__link email" target="_blank">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- Top navbar section ends -->
+
+
+
+
+    <!-- Nav section starts -->
+    <nav class="nav">
         <div class="nav__wrapper container">
             <a href="index.html" class="nav__logo">
                 <img src="assets/images/muramarr.gif" alt="logo" class="nav__logo-img">
             </a>
-            <div class="nav__social">
-                <a href="https://www.facebook.com/muramarrafting" class="nav__social__link facebook" target="_blank">
-                    <span class="nav__social-contact">muramarrafting</span>
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-                <a href="https://www.instagram.com/rafting_muramar/?hl=en" class="nav__social__link instagram"
-                    target="_blank">
-                    <span class="nav__social-contact">rafting_muramar</span>
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="mailto:info@muramar.si" class="nav__social__link email" target="_blank">
-                    <span class="nav__social-contact">info@muramar.si</span>
-                    <i class="fas fa-envelope"></i>
-                </a>
-                <a href="tel:+38651457800" class="nav__social__link phone" target="_blank">
-                    <span class="nav__social-contact">+38651457800</span>
-                    <i class="fas fa-phone-alt"></i>
-                </a>
-            </div>
-
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <a href="index.html" class="nav__link">domov</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#rafting" class="nav__link">rafting</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#gallery" class="nav__link">galerija</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#contact" class="nav__link">kontakt</a>
+                </li>
+            </ul>
             <div class="nav__hamburger" id="hamburger">
                 <span class="nav__hamburger-top"></span>
                 <span class="nav__hamburger-middle"></span>
                 <span class="nav__hamburger-bottom"> </span>
             </div>
         </div>
-
-        <div class="mobile-nav hidden" id="mobile-nav">
-            <ul class="mobile-nav__list">
-                <li class="mobile-nav__item"><a class="mobile-nav__link" href="index.html">Domov</a></li>
-                <li class="mobile-nav__item"><a class="mobile-nav__link" href="#rafting">Rafting</a></li>
-                <li class="mobile-nav__item"><a class="mobile-nav__link" href="#gallery">Galerija</a></li>
-                <li class="mobile-nav__item"><a class="mobile-nav__link" href="#contact">Kontakt</a></li>
-                <li class="mobile-nav__item"><a class="mobile-nav__link btn" href="#contact">Prijavite se</a></li>
-            </ul>
-        </div>
     </nav>
-    <!-- End navbar section ends -->
+    <!-- Nav section ends -->
+
 
 
 
@@ -101,7 +115,7 @@
 
 
     <!-- Card section starts -->
-    <section class="cards container">
+    <section class="cards container" id="cards">
         <article class="cards__item cards__item--primary">
             <i class="far fa-star"></i>
             <h5 class="cards__item__heading">Privat ture</h5>
@@ -124,6 +138,7 @@
         </article>
     </section>
     <!-- Card section ends -->
+
 
 
 
@@ -178,6 +193,7 @@
 
 
 
+
     <!-- Contact section starts -->
     <section class="section contact container" id="contact">
         <h3 class="section-title">Kontakt</h3>
@@ -185,9 +201,9 @@
         <div class="contact__wrapper">
             <div class="contact__item">
                 <article class="contact__info-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <h5 class="contact__info-heading">Nalov</h5>
-                    <a class="contact__link" href="">KROG, brod na MURI</a>
+                    <i class="fa-brands fa-facebook"></i>
+                    <h5 class="contact__info-heading">Facebook</h5>
+                    <a class="contact__link" href="https://www.facebook.com/muramarrafting">Muramar</a>
                 </article>
                 <article class="contact__info-item">
                     <i class="fas fa-phone-alt"></i>
@@ -208,7 +224,7 @@
             <div class="contact__item">
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2740.8020723000354!2d16.11511961547971!3d46.610914364216676!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476f407d0affadf9%3A0x81499e151c1a6e8c!2zQnJvZGFyc2thIHVsaWNhIDY4LCA5MDAwIE11cnNrYSBTb2JvdGEsINCh0LvQvtCy0LXQvdC40ZjQsA!5e0!3m2!1ssr!2srs!4v1656594754163!5m2!1ssr!2srs"
-                    style="border:0;" width="100%" height="350px" allowfullscreen="" loading="lazy"
+                    style="border:0;" width="100%" height="350px%" allowfullscreen="" loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
@@ -422,35 +438,35 @@
                 </ul>
             </article>
             <article class="footer__item">
-                <h4 class="footer__heading">Odeskov?</h4>
+                <h4 class="footer__heading">Meni</h4>
                 <ul class="footer__list">
                     <li class="footer__list__item">
                         <a href="index.html" class="footer__link">
-                            <i class="far fa-arrow-right"></i>
+                            <i class="fa-solid fa-caret-right"></i>
                             Domov
                         </a>
                     </li>
                     <li class="footer__list__item">
                         <a href="#rafting" class="footer__link">
-                            <i class="far fa-arrow-right"></i>
+                            <i class="fa-solid fa-caret-right"></i>
                             Rafting
                         </a>
                     </li>
                     <li class="footer__list__item">
                         <a href="#contact" class="footer__link">
-                            <i class="far fa-arrow-right"></i>
+                            <i class="fa-solid fa-caret-right"></i>
                             Kontakt
                         </a>
                     </li>
                     <li class="footer__list__item">
                         <a href="#gallery" class="footer__link">
-                            <i class="far fa-arrow-right"></i>
+                            <i class="fa-solid fa-caret-right"></i>
                             Galerija
                         </a>
                     </li>
                 </ul>
             </article>
-            <p class="footer__copy">Copyright ©2022 Filip Živanović All rights reserved</p>
+            <p class="footer__copy">Copyright ©2023 Muramar All rights reserved</p>
         </div>
     </footer>
     <!-- End footer section -->
@@ -458,7 +474,7 @@
 
     <!-- Scroll to top btn -->
     <button class="btn " id="scrollBtn">
-        <i class="far fa-arrow-up"></i>
+        <i class="fa-solid fa-chevron-up"></i>
     </button>
 
 

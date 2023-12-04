@@ -1,28 +1,42 @@
-// Open/close navigation list
+// Open/close menu
 const hamburgerIcon = document.getElementById('hamburger');
-const mobileNav = document.getElementById('mobile-nav');
+const navList = document.querySelector('.nav__list');
 
 hamburgerIcon.addEventListener('click', () => {
-    mobileNav.classList.toggle('hidden');
+    navList.classList.toggle('active');
     hamburgerIcon.classList.toggle('open');
 });
 
 
 // Close navigation list when click on link of navigation list
-const mobileNavItems = document.querySelectorAll('#mobile-nav li');
+const mobileNavItems = document.querySelectorAll('.nav__list > .nav__item');
 
-for (mobileNavItem of mobileNavItems) {
-    mobileNav.addEventListener('click', () => {
-        mobileNav.classList.add('hidden');
+mobileNavItems.forEach(function(el){
+    el.addEventListener('click', function(){
+        navList.classList.remove('active');
         hamburgerIcon.classList.remove('open');
-    });
-}
+    })
+   
+});
+
 
 // Close navigation list when we scroll down
 window.addEventListener('scroll', () => {
     hamburgerIcon.classList.remove('open');
-    mobileNav.classList.add('hidden');
+    navList.classList.remove('active');
 });
+
+
+
+// Close navigation list when we resize window
+window.addEventListener('resize', (e) =>{
+
+    if(window.innerWidth > 768){
+        navList.classList.remove('active');
+        hamburgerIcon.classList.remove('open');
+    }
+});
+
 
 
 // Show fixed BTN
@@ -44,39 +58,3 @@ btn.addEventListener('click', () => {
     window.scroll({ top: 0, behavior: "smooth" });
 });
 
-
-
-// Animation on scroll
-window.onscroll = () => {
-    raftingSectionAnimation();
-    contactSectionAnimation();
-}
-
-function raftingSectionAnimation() {
-    const sectionAnimation = document.querySelector('.rafting > .rafting__wrapper');
-    const sectionPosition = sectionAnimation.getBoundingClientRect().top;
-    const screenPosition = window.innerHeight / 1.3;
-    const raftingItems = document.querySelectorAll('.rafting__item');
-
-    if (sectionPosition < screenPosition) {
-
-        for (let item of raftingItems) {
-            item.classList.add('animated');
-        }
-    }
-}
-
-function contactSectionAnimation() {
-
-    const sectionAnimation = document.querySelector('.contact > .contact__wrapper');
-    const sectionPosition = sectionAnimation.getBoundingClientRect().top;
-    const screenPosition = window.innerHeight / 1.3
-    const contactItems = document.querySelectorAll('.contact__item');
-
-    if (sectionPosition < screenPosition) {
-
-        for (let item of contactItems) {
-            item.classList.add('animated');
-        }
-    }
-}

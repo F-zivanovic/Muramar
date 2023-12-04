@@ -1,65 +1,61 @@
 .cards {
-    @include flex(flex-start, stretch, row wrap);
+  @include flex(flex-start, stretch, row wrap);
 
-    @include breakpoints(768px) {
-        flex-direction: column;
+  @include breakpoints(768px) {
+    flex-direction: column;
+  }
+
+  .cards__item {
+    flex: 1;
+    padding: 2.5rem 1.5rem;
+    background-color: $white;
+    text-align: center;
+    animation: slideFromBottom 3s;
+
+    @include breakpoints(1200px) {
+      flex: 0 0 50%;
     }
 
     @include breakpoints(576px) {
-        margin-top: 0;
+      padding: 1rem;
     }
 
-    .cards__item {
-        flex: 1;
-        padding: 2.5rem 1.5rem;
-        background-color: $white;
-        text-align: center;
-        animation: slideFromBottom 3s;
-
-        &:nth-child(1) {
-            animation-delay: 100ms;
-        }
-
-        &:nth-child(2) {
-            animation-delay: 200ms;
-        }
-
-        &:nth-child(3) {
-            animation-delay: 300ms;
-        }
-
-        &:nth-child(4) {
-            animation-delay: 400ms;
-        }
-
-        @include breakpoints(576px) {
-            padding: 1.5rem;
-        }
-
-        @include breakpoints(1200px) {
-            flex: 0 0 50%;
-        }
-
-        &.cards__item--primary {
-            background-color: $primaryColor;
-            color: $white;
-        }
-
-        &__heading {
-            margin: .5rem 0;
-            font-size: 1.4rem;
-
-            @include breakpoints(576px) {
-                font-size: 1.2rem;
-            }
-        }
-
-        i {
-            font-size: 2rem;
-
-            @include breakpoints(768px) {
-                font-size: 1.7rem;
-            }
-        }
+    &:nth-child(1) {
+      animation-delay: 100ms;
     }
+
+    &:nth-child(2) {
+      animation-delay: 200ms;
+    }
+
+    &:nth-child(3) {
+      animation-delay: 300ms;
+    }
+
+    &:nth-child(4) {
+      animation-delay: 400ms;
+    }
+
+    &.cards__item--primary {
+      background-color: $primaryColor;
+      color: $white;
+    }
+
+    &__heading {
+      margin: 0.5rem 0;
+      font-size: 1.4rem;
+
+      @include breakpoints(576px) {
+        font-size: 1.2rem;
+      }
+    }
+
+    i {
+      font-size: 2rem;
+
+      @include breakpoints(768px) {
+        font-size: 1.7rem;
+      }
+    }
+  }
 }

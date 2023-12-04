@@ -1,61 +1,58 @@
 .contact {
+  &__wrapper {
+    @include flex(center, stretch, row wrap, 2rem);
 
-    &__wrapper {
-        @include flex(space-between, flex-start, row wrap);
+    // @include breakpoints(1200px) {
+    //   justify-content: center;
+    // }
 
-        @include breakpoints(1200px) {
-            justify-content: center;
+    .contact__item {
+      flex: 0 0 45%;
+      @include flex(space-between, stretch, row wrap);
+      //   opacity: 0;
+      //   transform: translateY(-50%);
+
+      //   &.animated {
+      //     opacity: 1;
+      //     transform: translate(0);
+      //   }
+
+      @include breakpoints(1200px) {
+        flex: 0 0 80%;
+      }
+
+      @include breakpoints(576px) {
+        flex: 0 0 100%;
+      }
+
+      .contact__info-item {
+        flex: 0 0 45%;
+        border: 2px solid rgba(0, 0, 0, 0.125);
+        padding: 2rem;
+        text-align: center;
+        margin-bottom: 1rem;
+
+        @include breakpoints(768px) {
+          flex: 0 0 100%;
         }
 
-        .contact__item {
-            flex: 0 0 47%;
-            @include flex(space-between, stretch, row wrap);
-            margin-top: 2rem;
-            opacity: 0;
-            transform: translateY(-50%);
-
-            &.animated {
-                opacity: 1;
-                transform: translate(0);
-            }
-
-            @include breakpoints(1200px) {
-                flex: 0 0 80%;
-            }
-
-            @include breakpoints(576px) {
-                flex: 0 0 100%;
-            }
-
-            .contact__info-item {
-                flex: 0 0 45%;
-                border: 2px solid rgba(0, 0, 0, .125);
-                padding: 2rem;
-                text-align: center;
-                margin-bottom: 1rem;
-
-                @include breakpoints(768px) {
-                    flex: 0 0 100%;
-                }
-
-                .contact__info-heading {
-                    font-size: 1.5rem;
-                }
-
-                .contact__link {
-                    color: $black;
-
-                    &:hover {
-                        color: $primaryColor;
-                    }
-                }
-
-                i {
-                    font-size: 1.5rem;
-                    color: $primaryColor;
-                }
-
-            }
+        .contact__info-heading {
+          font-size: 1.5rem;
         }
+
+        .contact__link {
+          color: $black;
+
+          &:hover {
+            color: $primaryColor;
+          }
+        }
+
+        i {
+          font-size: 1.5rem;
+          color: $primaryColor;
+        }
+      }
     }
+  }
 }

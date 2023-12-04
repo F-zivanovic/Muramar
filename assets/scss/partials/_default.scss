@@ -1,26 +1,26 @@
 * {
-    box-sizing: border-box;
-    margin: 0px;
-    padding: 0px;
-    scroll-behavior: smooth;
-    outline: none;
-    border: none;
-    text-decoration: none;
-    list-style-type: none;
-    transition: all .4s linear;
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  scroll-behavior: smooth;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  list-style-type: none;
+  transition: all 0.4s linear;
 }
 
 body {
-    overflow-x: hidden;
-    font-family: 'Poppins', sans-serif;
-    font-size: 100%;
-    background-color: $white;
-    color: $black;
-    line-height: 1.5;
+  overflow-x: hidden;
+  font-family: "Poppins", sans-serif;
+  font-size: 100%;
+  background-color: $white;
+  color: $black;
+  line-height: 1.5;
 
-    @include breakpoints(576px) {
-        font-size: 85%;
-    }
+  @include breakpoints(576px) {
+    font-size: 85%;
+  }
 }
 
 h1,
@@ -29,93 +29,111 @@ h3,
 h4,
 h5,
 h6 {
-    text-transform: capitalize;
+  text-transform: capitalize;
 }
 
 a {
-    cursor: pointer;
-    color: $white;
+  cursor: pointer;
+  color: $white;
 
-    &:hover {
-        color: $primaryColor;
-    }
+  &:hover {
+    color: $primaryColor;
+  }
 }
 
-
 img {
-    width: 100%;
-    vertical-align: middle;
-    object-fit: cover;
+  width: 100%;
+  vertical-align: middle;
+  object-fit: cover;
 }
 
 i {
-    cursor: pointer;
+  cursor: pointer;
 }
 
-
 .container {
-    width: 80%;
-    margin: 0px auto;
+  width: 80%;
+  margin: 0px auto;
 
-    @media(max-width:576px) {
-        width: 90%;
-    }
+  @media (max-width: 576px) {
+    width: 90%;
+  }
 }
 
 .btn {
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+  background-color: $primaryColor;
+  color: $white;
+  border-radius: 5px;
+  display: inline-block;
+  text-transform: capitalize;
+  font-weight: 700;
+  position: relative;
+  z-index: 2;
+  overflow-x: hidden;
+
+  &:hover::after {
+    transform: translateX(0%);
+    transition: 0.6s ease-in-out;
+  }
+
+  &::after {
+    transition: 0.6s ease-in-out;
+    display: block;
+    content: "";
+    position: absolute;
+    background-color: white;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transform: translateX(-100%);
+  }
+
+  @include breakpoints(576px) {
+    font-size: 0.8rem;
     padding: 10px 20px;
-    cursor: pointer;
-    background-color: $primaryColor;
-    color: $white;
-    border: 2px solid $primaryColor;
-    border-radius: 5px;
-    display: inline-block;
-    text-transform: capitalize;
-    font-weight: 700;
-
-    &:hover {
-        color: $primaryColor;
-        background-color: transparent;
-        border: 2px solid $primaryColor;
-    }
-
-    @include breakpoints(576px) {
-        font-size: 0.8rem;
-    }
+  }
 }
 
-
 .section {
-    padding: 70px 0px;
+  padding: 70px 0px;
 
-    &-title {
-        text-align: center;
-        font-size: 2.5rem;
-        font-weight: 700;
+  &-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
 
-        @include breakpoints(768px) {
-            font-size: 2rem;
-        }
+    @include breakpoints(768px) {
+      font-size: 2rem;
     }
+  }
 
-    &-subtitle {
-        margin: 20px 0px;
-        text-align: center;
-        font-size: 1.3rem;
-        font-weight: 500;
+  &-subtitle {
+    margin: 20px 0px;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 500;
 
-        @include breakpoints(576px) {
-            font-size: 1rem;
-        }
+    @include breakpoints(576px) {
+      font-size: 1rem;
     }
+  }
 }
 
 #scrollBtn {
-    @include positioning(fixed, auto, 1.5rem, 1.5rem);
-    z-index: 100;
-    transform: translateX(500px);
+  @include positioning(fixed, auto, 1.5rem, 1.5rem);
+  z-index: 100;
+  transform: translateX(500px);
 
-    &.show {
-        transform: translateX(0);
-    }
+  &.show {
+    transform: translateX(0);
+  }
+
+  &:hover {
+    color: $primaryColor;
+    border: 1px solid $primaryColor;
+  }
 }

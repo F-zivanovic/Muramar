@@ -1,41 +1,39 @@
 .footer {
-    background-color: $black;
+  background-color: $black;
 
-    .footer__wrapper {
-        @include flex(space-evenly, flex-start, row wrap);
+  .footer__wrapper {
+    @include flex(space-evenly, flex-start, row wrap);
+
+    @include breakpoints(576px) {
+      flex-direction: column;
+    }
+
+    .footer__item {
+      .footer__heading {
+        color: $white;
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
 
         @include breakpoints(576px) {
-            flex-direction: column;
+          font-size: 1.2rem;
         }
+      }
 
-        .footer__item {
-
-            .footer__heading {
-                color: $white;
-                font-size: 1.5rem;
-                margin-bottom: 1rem;
-
-                @include breakpoints(576px) {
-                    font-size: 1.2rem;
-                }
-            }
-
-            .footer__list {
-
-                &__item {
-                    margin-bottom: 1rem;
-                    color: $white;
-                }
-            }
+      .footer__list {
+        &__item {
+          margin-bottom: 1rem;
+          color: $white;
         }
-
-        .footer__copy {
-            flex: 0 0 100%;
-            text-align: center;
-            margin-top: 1.5rem;
-            padding-top: 2rem;
-            border-top: 2px solid $primaryColor;
-            color: $white;
-        }
+      }
     }
+
+    .footer__copy {
+      flex: 0 0 100%;
+      text-align: center;
+      margin-top: 1.5rem;
+      padding-top: 2rem;
+      border-top: 2px solid $primaryColor;
+      color: $white;
+    }
+  }
 }
