@@ -1,0 +1,49 @@
+.topnav {
+  background-color: $primaryColor;
+  padding: 0.5rem 0;
+  color: $white;
+
+  @include breakpoints(992px) {
+    display: none;
+  }
+
+  &__wrapper {
+    @include flex(space-between, center, row nowrap);
+
+    .topnav__info {
+      i {
+        margin-right: 0.2rem;
+      }
+
+      span {
+        &:not(:last-child) {
+          margin-right: 0.8rem;
+        }
+      }
+    }
+
+    .topnav__social {
+      &__link {
+        color: $primaryColor;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        border-radius: 50%;
+        background-color: white;
+        display: inline-block;
+        text-align: center;
+        border: 1px solid white;
+
+        &:hover {
+          color: white;
+          background: transparent;
+          transform: rotate(360deg);
+        }
+
+        &:not(:last-child) {
+          margin-right: 0.3rem;
+        }
+      }
+    }
+  }
+}
