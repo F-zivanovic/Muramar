@@ -1,8 +1,8 @@
 
-<h1 align="center">Rafting on Muri - Muramar - <a href="https://muramar.si/">Live Preview</a> </h1>
+<h1>Muramar - <a href="https://f-zivanovic.github.io/Muramar/">Live Preview</a> </h1>
 
 ## Built with
-This section contains list of all major technologies/libraries used to develop this project. 
+ Website was create with Vanila JS and custom CSS and HTML.
 
   ### Technologies
 
@@ -38,7 +38,6 @@ This section contains list of all major technologies/libraries used to develop t
   ### Libraries
   - <a href="https://fontawesome.com/">*Font Awesome*</a>
   - <a href="https://fonts.google.com/knowledge">*Google fonts*</a>
-  - <a href="https://cdnjs.com/libraries/lightgallery-js">*Light gallery*</a>
   
 ## Geting started
  This section contains how you can seting up this project locally. To get a local copy up and running follow these simple example steps.
