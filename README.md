@@ -51,7 +51,7 @@ git clone https://github.com/F-zivanovic/Muramar.git
 sass --watch assets/scss/style.scss:assets/css/style.css
 ```
 
-## contributing
+## Contributing
 If oyu have some idea which would make better this project, __create a PR__. Don't forget to give the project a star! Thanks again!
 
 1. Fork the project
