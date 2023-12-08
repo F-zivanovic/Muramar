@@ -45,6 +45,17 @@
     opacity: 1;
   }
 }
+@keyframes sectionTitle {
+  0% {
+    left: 10px;
+  }
+  50% {
+    left: 80px;
+  }
+  100% {
+    left: 10px;
+  }
+}
 /*---------------------------------
     PARTIALS
 ---------------------------------*/
@@ -152,9 +163,28 @@ i {
   padding: 70px 0px;
 }
 .section-title {
-  text-align: center;
   font-size: 2.5rem;
   font-weight: 700;
+  position: relative;
+}
+.section-title::after {
+  display: block;
+  content: "";
+  background-color: #e41e2d;
+  width: 100px;
+  height: 6px;
+  margin: 0.5rem 0;
+}
+.section-title::before {
+  content: "";
+  position: absolute;
+  bottom: 0%;
+  width: 5px;
+  height: 6px;
+  background-color: white;
+  z-index: 1;
+  left: 10px;
+  animation: sectionTitle 3s infinite linear;
 }
 @media (max-width: 768px) {
   .section-title {
@@ -163,7 +193,6 @@ i {
 }
 .section-subtitle {
   margin: 20px 0px;
-  text-align: center;
   font-size: 1.3rem;
   font-weight: 500;
 }

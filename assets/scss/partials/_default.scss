@@ -102,9 +102,30 @@ i {
   padding: 70px 0px;
 
   &-title {
-    text-align: center;
     font-size: 2.5rem;
     font-weight: 700;
+    position: relative;
+
+    &::after {
+      display: block;
+      content: "";
+      background-color: $primaryColor;
+      width: 100px;
+      height: 6px;
+      margin: 0.5rem 0;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0%;
+      width: 5px;
+      height: 6px;
+      background-color: white;
+      z-index: 1;
+      left: 10px;
+      animation: sectionTitle 3s infinite linear;
+    }
 
     @include breakpoints(768px) {
       font-size: 2rem;
@@ -113,7 +134,6 @@ i {
 
   &-subtitle {
     margin: 20px 0px;
-    text-align: center;
     font-size: 1.3rem;
     font-weight: 500;
 

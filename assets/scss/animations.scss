@@ -50,3 +50,17 @@
     opacity: 1;
   }
 }
+
+@keyframes sectionTitle {
+  0% {
+    left: 10px;
+  }
+
+  50% {
+    left: 80px;
+  }
+
+  100% {
+    left: 10px;
+  }
+}
