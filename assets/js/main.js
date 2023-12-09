@@ -84,7 +84,6 @@ const images = [
 window.addEventListener('load', () => {
     const gallery = document.querySelector('.gallery__wrapper');
 
-
     for (let i = 0; i < images.length; i++) {
         gallery.innerHTML += `      
                 <div class="gallery__img">
@@ -94,5 +93,24 @@ window.addEventListener('load', () => {
 });
 
 
+// Typing efect
+const mainHeading = document.querySelector('.banner__h1');
+const text = 'Muramar';
+
+let counter = 0;
+
+function writeText() {
+
+    mainHeading.innerHTML = text.slice(0, counter);
+    counter++;
+
+    if (counter > text.length) {
+        i = 1;
+    }
+
+    setTimeout(writeText, 1000 / 10);
+}
+
+writeText();
 
 
