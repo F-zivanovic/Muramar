@@ -8,13 +8,15 @@
 
   &__wrapper {
     @include flex(space-between, center, row nowrap);
+
     .nav__logo {
       width: 90px;
       display: inline-block;
     }
 
     .nav__list {
-      @include flex(flex-start, center, row nowrap, 1rem);
+      @include flex(flex-start, center, row nowrap, 1.5rem);
+      transition: 0s;
 
       @include breakpoints(768px) {
         position: absolute;
@@ -44,17 +46,34 @@
           font-size: 1.1rem;
           display: inline-block;
 
+          &:hover {
+            transform: translateY(-10px);
+          }
+
+          &:hover::after {
+            width: 100%;
+            transition: all 0.4s linear;
+          }
+
+          &::after {
+            display: block;
+            content: "";
+            background-color: $primaryColor;
+            width: 0%;
+            height: 2px;
+            transition: all 0.4s linear;
+          }
+
           @include breakpoints(768px) {
             color: $white;
+
+            &::after {
+              background-color: $white;
+            }
           }
 
           @include breakpoints(576px) {
             font-size: 0.9rem;
-          }
-
-          &:hover {
-            color: $black;
-            transform: translateY(-10px);
           }
         }
       }

@@ -289,7 +289,8 @@ i {
   justify-content: flex-start;
   align-items: center;
   flex-flow: row nowrap;
-  gap: 1rem;
+  gap: 1.5rem;
+  transition: 0s;
 }
 @media (max-width: 768px) {
   .nav__wrapper .nav__list {
@@ -319,19 +320,33 @@ i {
   font-size: 1.1rem;
   display: inline-block;
 }
+.nav__wrapper .nav__list .nav__item .nav__link:hover {
+  transform: translateY(-10px);
+}
+.nav__wrapper .nav__list .nav__item .nav__link:hover::after {
+  width: 100%;
+  transition: all 0.4s linear;
+}
+.nav__wrapper .nav__list .nav__item .nav__link::after {
+  display: block;
+  content: "";
+  background-color: #e41e2d;
+  width: 0%;
+  height: 2px;
+  transition: all 0.4s linear;
+}
 @media (max-width: 768px) {
   .nav__wrapper .nav__list .nav__item .nav__link {
     color: #fff;
+  }
+  .nav__wrapper .nav__list .nav__item .nav__link::after {
+    background-color: #fff;
   }
 }
 @media (max-width: 576px) {
   .nav__wrapper .nav__list .nav__item .nav__link {
     font-size: 0.9rem;
   }
-}
-.nav__wrapper .nav__list .nav__item .nav__link:hover {
-  color: #232323;
-  transform: translateY(-10px);
 }
 .nav__wrapper .nav__hamburger {
   cursor: pointer;
