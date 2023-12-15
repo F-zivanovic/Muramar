@@ -662,6 +662,10 @@ i {
 }
 .gallery__wrapper .gallery__img {
   flex: 1 1 350px;
+  overflow: hidden;
+}
+.gallery__wrapper .gallery__img:hover > img {
+  transform: scale(1.2);
 }
 
 .footer {

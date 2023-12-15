@@ -12,15 +12,13 @@
   }
 }
 
-@mixin positioning(
-  $position,
+@mixin positioning($position,
   $top: auto,
   $right: auto,
   $bottom: auto,
   $left: auto,
   $width: auto,
-  $height: auto
-) {
+  $height: auto) {
   position: $position;
   top: $top;
   right: $right;
@@ -28,4 +26,16 @@
   left: $left;
   width: $width;
   height: $height;
+
+  @if($left ==50% and $top ==50%) {
+    transform: translate(-50%, -50%);
+  }
+
+  @else if($right ==50% and $top ==50%) {
+    transform: translate(50%, -50%);
+  }
+
+  @else if($top ==50%) {
+    transform: translateY(-50%);
+  }
 }
