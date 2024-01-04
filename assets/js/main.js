@@ -114,3 +114,11 @@ function writeText() {
 writeText();
 
 
+getYear();
+
+function getYear() {
+
+    let date = new Date();
+    let currentYear = document.querySelector('.footer__copy span');
+    currentYear.innerHTML = date.getFullYear();
+}
