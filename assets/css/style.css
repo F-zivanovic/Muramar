@@ -416,16 +416,19 @@ i {
   }
 }
 .banner__wrapper .banner__h1 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   animation-name: slideFromTop;
   animation-duration: 2s;
 }
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   .banner__wrapper .banner__h1 {
     font-size: 2rem;
   }
 }
-.banner__wrapper .banner__h3 {
+.banner__wrapper .banner__h1 span {
+  color: #e41e2d;
+}
+.banner__wrapper .banner__h2 {
   font-size: 1.1rem;
   max-width: 750px;
   line-height: 2;
@@ -435,17 +438,17 @@ i {
   animation-duration: 2s;
 }
 @media (max-width: 768px) {
-  .banner__wrapper .banner__h3 {
+  .banner__wrapper .banner__h2 {
     font-size: 1rem;
     max-width: 100%;
   }
 }
 @media (max-width: 576px) {
-  .banner__wrapper .banner__h3 {
+  .banner__wrapper .banner__h2 {
     font-size: 0.8rem;
   }
 }
-.banner__wrapper .banner__h3 .banner__span {
+.banner__wrapper .banner__h2 .banner__span {
   color: #e41e2d;
 }
 .banner__wrapper .banner__link {
