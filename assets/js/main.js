@@ -87,7 +87,7 @@ window.addEventListener('load', () => {
     for (let i = 0; i < images.length; i++) {
         gallery.innerHTML += `      
                 <div class="gallery__img">
-                    <img src="${ images[i] }" alt="gallery img">
+                    <img src="${ images[i] }" alt="gallery img" loading="lazy" width="100%" height="auto">
                 </div>`
     }
 });
